@@ -109,10 +109,12 @@ let oldCars = carYears.filter(function(year){
 
 console.log(oldCars.length);
 
+//would it be possible to use the forEach method for this problem?----
+
 // ==== Challenge 6 ====
 // A buyer is interested in seeing only BMW and Audi cars within the inventory. Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
-let BMWAndAudi = inventory.filter(function(car){
-  return car.car_make === ("Audi" && "BMW");
+let BMWAndAudi = inventory.filter(function(car){ 
+    return (car.car_make === "BMW") || (car.car_make === "Audi");
 });
 let result = JSON.stringify(BMWAndAudi);
 console.log(result);
